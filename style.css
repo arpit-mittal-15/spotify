@@ -1,0 +1,40 @@
+body{
+    background-color: black;
+}
+    
+    
+#navbar{
+    height: 82vh;
+    width: 21vw;
+    background-color: rgb(39, 38, 38);
+    float: left;
+    margin: 3px;
+}
+#options{
+    height: 120px;
+    width: 96%;
+    background-color: aqua;
+    margin: 4px;
+}
+#library{
+    height: 77%;
+    width: 96%;
+    background-color: blue;
+    display: inline-block;
+    margin: 4px;
+}
+#main{
+    height: 82vh;
+    width: 55vw;
+    background-color: rgb(39, 38, 38);
+    float: left;
+    margin: 3px;
+}
+#sidebar{
+    height: 82vh;
+    width: 20vw;
+    background-color: rgb(39, 38, 38);
+    float: left;
+    margin: 3px;
+    margin-right: 0px;
+}
