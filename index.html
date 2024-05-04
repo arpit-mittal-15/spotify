@@ -14,16 +14,34 @@
                 <ul>
                     <li class="navlist">
                         <svg width="20" height="20">
-                            <polygon points="10,0 20,10 20,20 0,20 0,10" />
+                            <polygon id="homeicon" points="10,0 20,8 20,20 12,20 12,10 8,10 8,20 0,20 0,8" />
                         </svg>
-                        Home
+                        <span class="navpad">Home</span>
                     </li>
-                    <li class="navlist">Search</li>
+                    <li class="navlist">
+                        <svg width="20" height="20">
+                            <path id="searchicon" d="M 20 20 L 15 16 S 16 3 5 4 S 5 25 15 14" stroke-width="1.5">
+                        </svg>
+                        <span class="navpad">Search</span>
+                    </li>
                 </ul>
             </div>
-            <div id="library"></div>
+            <div id="library">
+                <div class="" id="lib_head"></div>
+                <div class="" id="playlist_head"></div>
+                <div class="" id="lib_nav"></div>
+                <div class="" id="saved_playlists"></div>
+            </div>
         </div>
-        <div id="main"></div>
+        <div id="main">
+            <div id="main_head"></div>
+            <div id="main_nav"></div>
+            <div id="recent_plays"></div>
+            <div id="recommended_plays">
+                <div id="recommended_plays_head"></div>
+                <div id="recommended_plays_content"></div>
+            </div>
+        </div>
         <div id="sidebar"></div>
         <div id="playing"></div>
     </div>

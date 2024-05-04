@@ -25,6 +25,8 @@ body{
     margin: 4px;
 }
 #library{
+    display: flex;
+    flex-flow: column nowrap;
     height: 80%;
     width: 96%;
     background-color: #1a1919;
@@ -52,24 +54,96 @@ body{
 }
 
 .navlist{
+    display: flex;
     font-size: 20px;
     font-family: monaco, monospace;
     color: #b5b1b1;
     list-style-type: none;
+    margin-left: -15px;
     padding: 10px;
     padding-left: 0px;
+    align-items: center;
 }
 .navlist:hover{
     color: white;
     transition: color 0.5s;
 
-& polygon{
+& #homeicon{
     opacity: 1;
     transition: opacity 0.5s;
+  }
+
+& #searchicon{
+    opacity: 1;
+    transition: opacity 0.5s;
+  }
 }
 
+.navpad{
+    padding-left: 15px;
 }
-polygon{
+#homeicon{
     fill:white;
     opacity: 0.6;
+}
+#searchicon{
+    stroke: white;
+    opacity: 0.6;
+}
+
+#lib_head{
+    height: 6vh;
+    width: 100%;
+    background-color: blue;
+    align-self: flex-start;
+}
+#playlist_head{
+    height: 5vh;
+    width: 100%;
+    align-self: flex-start;
+    background-color: red;
+}
+#lib_nav{
+    height: 6vh;
+    width: 100%;
+    align-self: flex-start;
+    background-color: white;
+}
+#saved_playlists{
+    height: 47vh;
+    width: 100%;
+    align-self: flex-start;
+    background-color: green;
+    overflow: auto;
+}
+
+#main_head{
+    height: 7vh;
+    width: 100%;
+    align-self: flex-start;
+    background-color: red;
+}
+#main_nav{
+    height: 7vh;
+    width: 100%;
+    align-self: flex-start;
+    background-color: blue;
+}
+#recent_plays{
+    height: 30vh;
+    width: 100%;
+    align-self: flex-start;
+    background-color: yellow;
+}
+#recommended_plays_head{
+    height: 8vh;
+    width: 100%;
+    align-self: flex-start;
+    background-color: white;
+}
+#recommended_plays_content{
+    height: 31vh;
+    width: 100%;
+    align-self: flex-start;
+    background-color: brown;
 }
