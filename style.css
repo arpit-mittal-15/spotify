@@ -2,39 +2,74 @@ body{
     background-color: black;
 }
     
-    
+#content{
+    display: grid;
+    gap: 2px 2px;
+    grid-template-columns: auto auto auto;
+    margin-left: 3px;
+}
 #navbar{
-    height: 82vh;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 84vh;
     width: 21vw;
-    background-color: rgb(39, 38, 38);
-    float: left;
-    margin: 3px;
+    border-radius: 6px;
 }
 #options{
+    flex-shrink: 0;
     height: 120px;
     width: 96%;
-    background-color: aqua;
+    background-color: #1a1919;
+    border-radius: 6px;
     margin: 4px;
 }
 #library{
-    height: 77%;
+    height: 80%;
     width: 96%;
-    background-color: blue;
-    display: inline-block;
+    background-color: #1a1919;
+    border-radius: 6px;
     margin: 4px;
 }
 #main{
-    height: 82vh;
+    height: 84vh;
     width: 55vw;
-    background-color: rgb(39, 38, 38);
-    float: left;
-    margin: 3px;
+    background-color: #1a1919;
+    border-radius: 6px;
 }
 #sidebar{
-    height: 82vh;
-    width: 20vw;
-    background-color: rgb(39, 38, 38);
-    float: left;
-    margin: 3px;
-    margin-right: 0px;
+    height: 84vh;
+    width: 22vw;
+    background-color: #1a1919;
+    border-radius: 6px;
+}
+#nowplaying{
+    position: absolute;
+    height: 100px;
+    width: 99vw;
+    background-color: white;
+    bottom: 0px;
+}
+
+.navlist{
+    font-size: 20px;
+    font-family: monaco, monospace;
+    color: #b5b1b1;
+    list-style-type: none;
+    padding: 10px;
+    padding-left: 0px;
+}
+.navlist:hover{
+    color: white;
+    transition: color 0.5s;
+
+& polygon{
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+}
+polygon{
+    fill:white;
+    opacity: 0.6;
 }
