@@ -11,23 +11,43 @@
     <div id="content">
         <div id="navbar">
             <div id="options">
-                <ul>
-                    <li class="navlist">
-                        <svg width="20" height="20">
-                            <polygon id="homeicon" points="10,0 20,8 20,20 12,20 12,10 8,10 8,20 0,20 0,8" />
-                        </svg>
-                        <span class="navpad">Home</span>
-                    </li>
-                    <li class="navlist">
-                        <svg width="20" height="20">
-                            <path id="searchicon" d="M 20 20 L 15 16 S 16 3 5 4 S 5 25 15 14" stroke-width="1.5">
-                        </svg>
-                        <span class="navpad">Search</span>
-                    </li>
-                </ul>
+                <div id="options_margin">
+                    <ul>
+                        <li class="navlist">
+                            <svg width="20" height="20">
+                                <polygon id="homeicon" points="10,0 20,8 20,20 12,20 12,10 8,10 8,20 0,20 0,8" />
+                            </svg>
+                            <span class="navpad">Home</span>
+                        </li>
+                        <li class="navlist">
+                            <svg width="20" height="20">
+                                <path id="searchicon" d="M 20 20 L 15 16 S 16 3 5 4 S 5 25 15 14" stroke-width="1.5">
+                            </svg>
+                            <span class="navpad">Search</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div id="library">
-                <div class="" id="lib_head"></div>
+                <div class="" id="lib_head">
+                    <div class="focus" id="lib_heading">
+                        <svg width="20" height="20">
+                            <path d="M 20 4 L20 20 L15 20 L15 0 M 10 20 L 10 0 M 5 20 L 5 0" stroke="white" fill="white"/>
+                        </svg>
+                        <span>Your Library</span>
+                    </div>
+                    <div id="space_inbtw_libhead"></div>
+                    <div class="focus" id="add_playlist">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20" width="17.5" viewBox="0 0 448 512">
+                            <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" fill="white"/>
+                        </svg>
+                    </div>
+                    <div class="focus" id="show_more_playlist">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20" width="17.5" viewBox="0 0 448 512">
+                            <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" fill="white"/>
+                        </svg>
+                    </div>
+                </div>
                 <div class="" id="playlist_head"></div>
                 <div class="" id="lib_nav"></div>
                 <div class="" id="saved_playlists"></div>
