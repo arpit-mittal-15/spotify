@@ -21,7 +21,7 @@ body{
     flex-shrink: 0;
     height: 120px;
     width: 96%;
-    background-color: #1a1919;
+    background-color: #131212;
     border-radius: 6px;
     margin: 4px;
 }
@@ -30,20 +30,20 @@ body{
     flex-flow: column nowrap;
     height: 80%;
     width: 96%;
-    background-color: #1a1919;
+    background-color: #131212;
     border-radius: 6px;
     margin: 4px;
 }
 #main{
     height: 84vh;
     width: 55vw;
-    background-color: #1a1919;
+    background-color: #131212;
     border-radius: 6px;
 }
 #sidebar{
     height: 84vh;
     width: 22vw;
-    background-color: #1a1919;
+    background-color: #131212;
     border-radius: 6px;
 }
 #nowplaying{
@@ -85,7 +85,6 @@ body{
 }
 #homeicon{
     fill:white;
-    opacity: 0.6;
 }
 #searchicon{
     stroke: white;
@@ -118,26 +117,97 @@ body{
 }
 .focus:hover{
     opacity: 1;
+    cursor: pointer;
     transition: 0.5s;
 }
 #playlist_head{
     height: 5vh;
     width: 100%;
     align-self: flex-start;
-    background-color: blue;
+    font-size: 14px;
+}
+.pl_head{
+    height: 5vh;
+    float: left;
+    padding: 2px;
+    color: white;
+    margin-left: 25px;
+    line-height: 30px;
 }
 #lib_nav{
     height: 6vh;
     width: 100%;
-    background-color: yellow;
+    align-items: center;
+}
+.lib_nav{
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    opacity: 0.6;
+}
+#lib_search{
+    float: left;
+    margin-left: 28px;
+}
+#lib_recents{
+    margin-right: 15px;
+    font-size: 14px;
+    color: white;
+    float: right;
+}
+#lib_recents:hover{
+    transform: scale(1.1);
+    transition: 0.6s;
 }
 #saved_playlists{
     height: 47vh;
     width: 100%;
-    background-color: green;
     overflow: auto;
+    scrollbar-width: none;
 }
-
+.saved_pl{
+    height: 75px;
+    width: 19vw;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 5px; 
+    display: grid;
+    grid-template-columns: 5vw 4vw 4vw 4vw;
+    grid-template-rows: auto auto;
+    gap: 5px;
+}
+::-webkit-scrollbar{
+    width: 0;
+    background: transparent;
+}
+.saved_pl:hover{
+    background-color: #222121;
+}
+.playlist_img{
+    height: 65px;
+    width: 65px;
+    border-radius: 8px;
+    grid-column: 1;
+    grid-row:1/3;
+    align-self: center;
+    justify-self: center;
+}
+.saved_pl_name{
+    color: white;
+    font-size: 17px;
+    grid-column: 2/5;
+    grid-row: 1;
+    align-content: center;
+    justify-content: start;
+}
+.saved_pl_author{
+    color: white;
+    font-size: 14px;
+    font-family: roboto;
+    opacity: 0.6;
+    grid-column: 2/5;
+    grid-row: 2;
+}
 #main_head{
     height: 7vh;
     width: 100%;
