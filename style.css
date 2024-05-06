@@ -175,6 +175,7 @@ body{
     grid-template-columns: 5vw 4vw 4vw 4vw;
     grid-template-rows: auto auto;
     gap: 5px;
+    cursor: pointer;
 }
 ::-webkit-scrollbar{
     width: 0;
@@ -208,29 +209,178 @@ body{
     grid-column: 2/5;
     grid-row: 2;
 }
+
+/* ---------------    MAIN CONTENT    -------------*/
+
 #main_head{
     height: 7vh;
     width: 100%;
     align-self: flex-start;
-    background-color: red;
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: 1px 80px auto 160px 160px 35px 35px 1px;
+    grid-template-rows: auto;
+    align-items: center;
+    gap: 10px;
+    color: white;
 }
+#main_arrows{
+    height: 4.5vh;
+    grid-column: 2;
+    align-content: center;
+}
+.main_arrow{
+    display: inline-block;
+    height: 100%;
+    width: 35px;
+    align-content: center;
+    text-align: center;
+    border-radius: 50%;
+    background-color: black;
+    opacity: 0.6;
+}
+.main_options{
+    background-color: black;
+    align-content: center;
+    text-align: center;
+    font-family: roboto;
+    height: 4.5vh;
+}
+.main_options:hover{
+    background-color: #222121;
+    transform: scale(1.05);
+    cursor: pointer;
+    transition: 0.5s;
+}
+#premium{
+    font-size: 1.1rem;
+    grid-column: 4;
+    border-radius: 30px;
+}
+#install{
+    grid-column: 5;
+    font-size: 1.1rem;
+    border-radius: 30px;
+}
+#notification{
+    grid-column: 6;
+    border-radius: 50%;
+}
+#profile{
+    grid-column: 7;
+    border-radius: 50%;
+}
+
+
 #main_nav{
     height: 7vh;
     width: 100%;
     align-self: flex-start;
-    background-color: blue;
+}
+.main_nav{
+    height: auto;
+    width: auto;
+    border-radius: 15px;
+    float: left;
+    padding: 5px 8px 5px 8px;
+    margin: 5px;
+    margin-top: 10px;
+    color: white;
+    font-family: monoco;
+    cursor: pointer;
+}
+#main_nav_all{
+    margin-left: 15px;
+    background-color: black;
 }
 #recent_plays{
     height: 30vh;
     width: 100%;
     align-self: flex-start;
-    background-color: yellow;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    column-gap: 5px;
 }
-#recommended_plays_head{
-    height: 8vh;
+.recent_plays{
+    height: 50px;
+    width: 25vw;
+    margin: auto;
+    display: inline-grid;
+    grid-template-columns: 50px auto 50px 15px;
+    border-radius: 8px;
+    color: white;
+}
+.recent_plays:hover{
+    background-color: black;
+    cursor: pointer;
+    transition: 0.5s;
+
+& .playbtn_div{
+    opacity: 1;
+    transition: 0.5s;
+}
+}
+.recent_play_img{
+    height: 50px;
+    width: 50px;
+    border-radius: 8px 0px 0px 8px;
+}
+.recent_play_title{
+    height: 100%;
+    width: auto;
+    align-content: center;
+    padding-left: 8px;
+    font-size: 1.25vw;
+}
+.recent_play_playbtn{
+    height: 40px;
+    width: 40px;
+    align-content: center;
+    margin: auto;
+}
+.playbtn_div{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin: auto;
+    align-content: center;
+    text-align: center;
+    padding: 4px 0px 0px 4px;
+    opacity: 0;
+    background-color: rgb(36, 217, 39);
+}
+.playbtn_div:hover{
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+.recommended_plays_head{
+    height: 3vw;
     width: 100%;
     align-self: flex-start;
-    background-color: white;
+    color: white;
+    display: inline-grid;
+    grid-template-columns: 400px auto 90px;
+}
+.recommended_title{
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    align-content: end;
+    font-size: 1.5vw;
+    padding: 0px 0px 3px 20px;
+    font-family: monoco;
+}
+.recommended_show_more{
+    grid-column: 3;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    align-content: center;
+    font-size: 1vw;
+}
+.underline:hover{
+    text-decoration: underline;
 }
 #recommended_plays_content{
     height: 31vh;
