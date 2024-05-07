@@ -330,7 +330,75 @@
                 </div>
             </div>
         </div>
-        <div id="sidebar"></div>
+        <div id="sidebar">
+            <div id="sidebar_head">
+                <div class="sidebar_head underline pointer" id="playing_pl_title">Maine Royaan</div>
+                <div></div>
+                <div class="sidebar_head focus" id="sidebar_head_options">
+                    <svg height="20" width="20" viewBox="0 0 448 512">
+                        <path fill="white" d="M8 256a56 56 0 1 1 112 0A56 56 0 1 1 8 256zm160 0a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm216-56a56 56 0 1 1 0 112 56 56 0 1 1 0-112z"/>
+                    </svg>
+                </div>
+                <div class="sidebar_head focus" id="sidebar_head_close">
+                    <svg width="20" height="20" viewBox="0 0 384 512">
+                        <path fill="white" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
+                    </svg>
+                </div>
+            </div>
+            <div id="sidebar_content">
+                <div id="song_info">
+                    <div class="pointer" id="song_img">
+                        <img id="sidebar_song_img" src="logo/img7.jpg">
+                    </div>
+                    <div id="song_desc">
+                        <div class="underline pointer" id="playing_song_title">Naino ne Baandhi</div>
+                        <div class="underline focus" id="playing_song_desc">Darshan Raval</div>
+                        <div id="playing_song_add">
+                            <svg class="focus" width="20" height="20">
+                                <circle cx="10" cy="10" r="9" stroke="white" stroke-width="1" fill="black" />
+                                <path stroke="white" stroke-width="1" d="M10 4 L10 16 M4 10 L16 10" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div id="credits">
+                    <div id="credits_head">
+                        <div id="credits_head_title">Credits</div>
+                        <div class="underline focus" id="credits_head_show">Show all</div>
+                    </div>
+                    <div id="credits_content">
+                        <div class="song_credit">
+                            <div class="credit_artist underline pointer">Darshan Raval</div>
+                            <div class="credit_artist_role">Main Artist, Composer</div>
+                            <div class="credit_artist_follow pointer">Follow</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="play_queue">
+                    <div id="queue_head">
+                        <div id="queue_head_title">Next in queue</div>
+                        <div class="underline focus" id="queue_head_open">Open queue</div>
+                    </div>
+                    <div class="pointer" id="song_in_queue">
+                        <div class="queue_playbtn" id="queue_music">
+                            <svg width="15" height="30px" viewBox="0 0 512 512">
+                                <path fill="white" d="M499.1 6.3c8.1 6 12.9 15.6 12.9 25.7v72V368c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6V147L192 223.8V432c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6V200 128c0-14.1 9.3-26.6 22.8-30.7l320-96c9.7-2.9 20.2-1.1 28.3 5z"/>
+                            </svg>
+                        </div>
+                        <div class="queue_playbtn" id="queue_play">
+                            <svg height="15" width="15" viewBox="0 0 384 512">
+                                <path fill="white" d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/>
+                            </svg>
+                        </div>
+                        <div id="queue_song_img">
+                            <img src="logo/img4.jpg">
+                        </div>
+                        <div class="pointer underline" id="queue_song_title">O Sanam</div>
+                        <div class="pointer underline focus" id="queue_song_desc">Lucky Ali</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div id="nowplaying" style="position: fixed;"></div>
 </body>
