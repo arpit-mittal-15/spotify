@@ -8,12 +8,13 @@ body{
     gap: 2px 2px;
     grid-template-columns: auto auto auto;
     margin-left: 3px;
+    overflow: hidden;
 }
 #navbar{
     display:flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    height: 84vh;
+    height: calc(100vh - 100px);
     width: 21vw;
     border-radius: 6px;
 }
@@ -39,23 +40,27 @@ body{
     background: transparent;
 }
 #main{
-    height: 84vh;
+    height: calc(100vh - 100px);
     width: 55vw;
-    background-image: linear-gradient(rgba(150, 37, 154, 0.8), rgb(150, 37, 154, 0.05), #131212);
+    background-image: linear-gradient(rgba(150, 37, 154, 0.5), rgb(150, 37, 154, 0.05), #131212);
     border-radius: 6px;
 }
 #sidebar{
-    height: 84vh;
+    height: calc(100vh - 100px);
     width: 22vw;
     background-color: #131212;
     border-radius: 6px;
 }
 #nowplaying{
-    position: absolute;
-    height: 100px;
+    position: fixed;
+    height: 85px;
     width: 99vw;
-    background-color: white;
     bottom: 0px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 320px auto 320px;
+    grid-template-rows: 98%;
 }
 
 .navlist{
@@ -618,6 +623,7 @@ body{
 }
 .credit_artist_follow:hover{
     transform: scale(1.1);
+    transition: 0.3s;
 }
 #play_queue{
     box-sizing: border-box;
@@ -681,10 +687,13 @@ body{
 #queue_song_img{
     grid-column: 2;
     grid-row: 1/3;
+    align-items: end;
+    align-content: center;
+    padding-left: 5px;
 }
 #queue_song_img > img{
-    height: 100%;
-    width: 100%;
+    height: 80%;
+    width: 80%;
     border-radius: 5px;
 }
 
@@ -693,11 +702,149 @@ body{
     grid-row: 1;
     font-size: 1.3vw;
     align-self: center;
-    padding-left: 8px;
+    padding-left: 4px;
 }
 #queue_song_desc{
     grid-column: 3;
     grid-row: 2;
     font-size: 1vw;
-    padding-left: 8px;
+    padding-left: 4px;
+}
+#nowplaying_song_info{
+    height: 98%;
+    width: 97%;
+    margin: 0px auto;
+
+    display: grid;
+    grid-template-columns: 70px auto 30px;
+    grid-template-rows: 50% 50%;
+    align-items: center;
+}
+#nowplaying_song_image{
+    columns: 1;
+    grid-row: 1/3;
+    height: 60px;
+    width: 60px;
+    justify-self: center;
+}
+#nowplaying_song_image > img{
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+.nowplaying_song_desc{
+    grid-column: 2;
+    grid-row: 2;
+    width: 100%;
+    align-self: start;
+    padding: 0px 0px 3px 5px ;
+    font-family: monoco;
+    color: white;
+}
+#nowplaying_song_title{
+    grid-column: 2;
+    grid-row: 1;
+    align-self: end;
+    padding: 0px 0px 3px 5px ;
+    font-size: 18px;
+}
+#nowplaying_song_artist{
+    grid-column: 2;
+    grid-row: 2;
+    align-self: start;
+    font-size: 14px;
+}
+#nowplaying_song_add{
+    grid-column: 3;
+    grid-row: 1/3;
+    justify-self: end;
+}
+#audio_player{
+    height: 98%;
+    width: 98%;
+    margin: 0px auto;
+
+    display: grid;
+    grid-template-columns:auto;
+    grid-template-rows: 60% 40%;
+}
+#audio_player_options{
+    grid-row: 1;
+    display: inline-grid;
+    grid-template-columns: auto 50px 50px 50px 50px 50px auto;
+    grid-template-rows: 100%;
+    justify-items: center;
+    column-gap: 5px;
+}
+.audio_player_options{
+    height: 40px;
+    width: 40px;
+    align-self: center;
+    align-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+.audio_player_options > svg{
+    filter: drop-shadow(0 0 6px white);
+}
+#audio_player_progress{
+    grid-row: 2;
+    display: inline-grid;
+    grid-template-columns: 50px auto 50px;
+    grid-template-rows: 100%;
+    justify-items: center;
+    justify-content: center;
+}
+.audio_timestamp{
+    width: fit-content;
+    height: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: white;
+    padding-top: 2px;
+    opacity: 0.7;
+}
+#song_progress{
+    width: calc(100vw - 1000px);
+    max-width: 500px;
+    min-width: 200px;
+}
+#song_progress_bar{
+    height: 17px;
+    width: 100%;
+    top: 0;
+}
+#song_progress_bar::-webkit-progress-value{
+    background-color: #2fff3d;
+}
+#nowplaying_song_options{
+    height: 98%;
+    width: 97%;
+    margin: 2px auto;
+
+    display: grid;
+    grid-template-columns: 32px 32px 32px 32px auto 32px 32px;
+    column-gap: 0px;
+    justify-items: center;
+    align-content: center;
+}
+.nowplaying_song_options{
+    height: 30px;
+    width: 30px;
+    align-content: center;
+    text-align: center;
+    opacity: 0.8;
+}
+#now_playing_sound{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+#sound_value{
+    height: 24px;
+    width: 67px;
 }
